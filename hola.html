@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hola mundo con javascript</title>
+</head>
+<body>
+    <button onclick="saludar()">saludar</button>
+    <hr>
+    <h4>promedio</h4>
+    calificacion 1:
+    <input type="text" name="" id="cal_1">
+    calificacion 2:
+    <input type="text" name="" id="cal_2">
+    <button onclick="promediar()">promediar</button>
+    resultado:
+    <input type="text" name="" id="resultado" disabled  >
+    <hr>
+    <h3>area del triangulo</h3>
+    base:
+    <input type="text" name="" id="base">
+    altura:
+    <input type="text" name="" id="altura">
+    <button onclick="multiplicar()">calcular</button>
+    area: 
+    <input type="text" name="" id="resultado2" disabled>
+
+  <script>
+      function saludar(){
+          alert("hola como estas?");
+      }
+
+      //funcion promediar
+function promediar(){
+    var cal1  = parseFloat(document.getElementById("cal_1").value);
+    var cal2 = parseFloat(document.getElementById("cal_2").value);
+
+    var resultado = (cal1 + cal2) / 2;
+    document.getElementById("resultado").value = resultado;
+    
+}
+//funcion multiplicar
+function multiplicar(){
+    var base  = parseFloat(document.getElementById("base").value);
+    var altura = parseFloat(document.getElementById("altura").value);
+
+    var resultado = (base*altura) /2;
+
+    document.getElementById("resultado2").value = resultado;
+}
+    </script>
+</body>
+</html>

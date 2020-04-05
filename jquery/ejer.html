@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primer saludo jquery</title>
+</head>
+<body>
+    <button id="saludo">saludar</button>
+    <hr>
+<div id="texto">si das click en el boton ocultar, esto desaparecera</div>
+
+    <button id="ocultar">ocultar</button>
+    <button id="mostrar">mostrar</button>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        //inicios jquery
+        $(document).ready(function(){
+
+            $("#saludo").click(function(){
+                alert("hola desde jquerty :D");
+
+            });
+
+            $("#ocultar").click(function(){
+                        //codigo para ocultar
+                    $("#texto").hide(1000);
+
+             });
+
+            $("#mostrar").click(function(){
+            //codigo para mostrar
+            $("#texto").show(1000);
+            });
+
+        });
+
+    </script>
+</body>
+</html>

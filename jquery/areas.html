@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area</title>
+    <style>
+        div{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>calcular areas</h2>
+    <button id="mostrar_cuadrado">cuadrado</button>
+    <button id="mostrar_triangulo">triangulo</button>
+    <hr>
+
+
+    <div id="cuadrado">
+        <h3>cuadrado</h3>
+        da un lado: <input type="text" name="" id="lado">
+        <button id="area_cuadrado">calcular</button>
+
+    </div>
+
+    <div id="triangulo">
+        <h3>triangulo</h3>
+       de la base: <input type="text" name="" id="base"> <br>
+       de la altura: <input type="text" name="" id="altura"> <br>
+       <button id="area_triangulo">calcular</button>
+
+    </div>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(function(){
+            
+            //funcion para mostrar formulario cuadrado
+            $("#mostrar_cuadrado").click(function(){
+              $("#cuadrado").show(1000);
+              $("#triangulo").hide(1000);
+            });
+
+             
+            $("#mostrar_triangulo").click(function(){
+              $("#triangulo").show(1000);
+              $("#cuadrado").hide(1000);
+             
+            });
+
+
+        });
+
+           //funcion multiplicar
+function multiplicar(){
+    var base  = parseFloat(document.getElementById("base").value);
+    var altura = parseFloat(document.getElementById("altura").value);
+
+    var resultado = (base*altura) /2;
+
+    document.getElementById("resultado2").value = resultado;
+
+             
+
+
+    </script>
+</body>
+</html>
